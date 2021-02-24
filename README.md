@@ -39,7 +39,7 @@ First of all clone the repository and move into the directory.
 
 ### Deploy to Heroku
 
-Make sure you have Heroku CLI installed.
+Make sure you have [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed.
 
 - Create a new Heroku app
   ```shell
