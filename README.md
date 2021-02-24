@@ -2,7 +2,7 @@
 
 Simple yet powerful URL shortener built with [FastAPI](https://github.com/tiangolo/fastapi).
 
-**[WIP] No issues or PRs accepted**
+**Work is in Progress. No external issues or PRs will be accepted.**
 
 - [fastapi-url-shortener](#fastapi-url-shortener)
   - [Features](#features)
