@@ -2,6 +2,7 @@
 
 Simple yet powerful URL shortener built with FastAPI.
 
+**[WIP] No issues or PRs accepted**
 
 - [fastapi-url-shortener](#fastapi-url-shortener)
   - [Features](#features)
