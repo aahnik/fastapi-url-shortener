@@ -3,12 +3,22 @@
 Simple yet powerful URL shortener built with FastAPI.
 
 
-
 - [fastapi-url-shortener](#fastapi-url-shortener)
+  - [Features](#features)
   - [Docs](#docs)
   - [How to deploy](#how-to-deploy)
     - [Deploy to Heroku](#deploy-to-heroku)
     - [Run on Localhost](#run-on-localhost)
+
+## Features
+
+- Fast and scalable
+- Shorten a long URL using a custom slug
+- Self host easily
+- Connect to your own domain
+- Integrate with other services using RESTful API
+- Free and Open Source
+
 
 ## Docs
 
