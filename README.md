@@ -22,7 +22,7 @@ Simple yet powerful URL shortener built with FastAPI.
 
 ## Docs
 
-- [Swagger UI](https://fastapi-url-shortener.herokuapp.com/docs)
+- [Swagger](https://fastapi-url-shortener.herokuapp.com/docs)
 - [Redoc](https://fastapi-url-shortener.herokuapp.com/redoc)
 
 ## How to deploy
