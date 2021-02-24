@@ -1,6 +1,6 @@
 # fastapi-url-shortener
 
-Simple yet powerful URL shortener built with FastAPI.
+Simple yet powerful URL shortener built with [FastAPI](https://github.com/tiangolo/fastapi).
 
 **[WIP] No issues or PRs accepted**
 
@@ -55,11 +55,11 @@ Make sure you have Heroku CLI installed.
 
 
 ### Run on Localhost
-- Install dependancies from `requirements.txt`
+- Install dependancies from [`requirements.txt`](requirements.txt)
   ```shell
   pip install -r requirements.txt
   ```
-- Run the server using `uvicorn`
+- Run the server using [`uvicorn`](https://github.com/encode/uvicorn)
   ```shell
   uvicorn main:app --reload
   ```
