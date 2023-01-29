@@ -11,6 +11,35 @@
 
 
             <br>
+
+        </div>
+    </div>
+</section>
+
+
+
+<form class="myform">
+    <div class="grid gap-6 mb-6 md:grid-cols-1">
+        <div>
+            <label for="Long URL" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Long URL</label>
+            <input type="text" id="long-url" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="https://github.com/aahnik/tgcf/wiki/" required>
+        </div>
+        <div>
+            <label for="Custom Slug" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Custom Slug</label>
+            <input type="text" id="custom-slug" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="twiki" required>
+        </div>
+
+    </div>
+
+    <button id="sub" type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="">Submit</button>
+</form>
+
+<section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <div class="text-center lg:w-2/3 w-full">
+
+
+            <br>
             <div class="flex justify-center">
                 <a href="https://github.com/aahnik/fastapi-url-shortener"><button
                     class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">GitHub</button></a>
@@ -19,9 +48,47 @@
                     class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Docs</button></a>
 
             </div>
+
         </div>
     </div>
 </section>
 
+<script>
+    // Example POST method implementation:
+    async function postData(url = '', data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+          method: 'POST', // *GET, POST, PUT, DELETE, etc.
+          mode: 'cors', // no-cors, *cors, same-origin
+          cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+          credentials: 'same-origin', // include, *same-origin, omit
+          headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: 'follow', // manual, *follow, error
+          referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+          body: JSON.stringify(data) // body data type must match "Content-Type" header
+        });
+        return response.json(); // parses JSON response into native JavaScript objects
+      }
 
+
+
+    submit = document.getElementById(`sub`);
+    submit.onclick = run
+    function run(){
+        longUrl = document.getElementById(`long-url`).value;
+        customSlug = document.getElementById(`custom-slug`).value;
+        console.log("hello");
+        console.log(longUrl);
+        console.log(customSlug);
+
+
+        if (longUrl != `` && customSlug != ``){
+            postData('http://127.0.0.1:8000/shorten',{"slug":customSlug,"url":longUrl}).then((data)=>{console.log
+            (data)});
+        }
+    }
+</script>
 {% endblock content %}
